@@ -36,7 +36,35 @@ Cel: symulacja podstawowych zachowań różnych zwierząt. Świetny do pokazania
 
 9. Kroki Git/GitHub [02]
    - README z rysunkiem prostego diagramu klas (PNG w repo). [02]
+
    - Branch `feature/simulation-cycle`, PR, opis zmian, tag `v0.1.0`. [02]
 
 Co ćwiczysz: klasy abstrakcyjne i interfejsy (08), dziedziczenie/polimorfizm (07), konstruktory (06), kapsułkowanie (05), pola/stałe (05b), pakiety i `main` (04–03), workflow Git (02), modelowanie obiektów (01).
 
+```mermaid
+classDiagram
+    class Animal {
+        <<abstract>>
+        ~name String
+        ~age int
+        +eat()
+        +sleep()
+        +abstract String sound()
+        +String info()
+    }
+    class Mammal {
+        ~furcolor String
+        +String sound()
+    }
+    class Bird {
+        ~wingspan double
+        +String sound()
+    }
+    class Reptile{
+        ~scalecolor String
+        +String sound()
+    }
+    Animal<--Mammal
+    Animal<--Bird
+    Animal<--Reptile
+```
