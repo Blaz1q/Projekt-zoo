@@ -3,8 +3,9 @@ package zoo.domain;
 public abstract class Animal {
     private String name;
     private int age;
-
     public Animal(String name, int age) {
+        if(age<=0) age = 5;
+        if(name.trim().isEmpty()) name = "Nieokreślony";
         this.name = name;
         this.age = age;
     }
@@ -29,10 +30,11 @@ public abstract class Animal {
 
 // Klasa konkretna zwierzęcia
 class Mammal extends Animal {
+    public final int MAX_AGE_MAMMAL = 100;
     String furColor;
     public Mammal(String name, int age, String furcolor) {
-        this.furColor = furcolor;
         super(name, age);
+        this.furColor = furcolor;
     }
 
     @Override
@@ -41,10 +43,11 @@ class Mammal extends Animal {
     }
 }
 class Bird extends Animal {
+    public final int MAX_AGE_BIRD = 20;
     String wingspan;
     public Bird (String name, int age, String wingspan) {
-        this.wingspan = wingspan;
         super(name, age);
+        this.wingspan = wingspan;
     }
 
     @Override
@@ -53,10 +56,11 @@ class Bird extends Animal {
     }
 }
 class Reptile extends Animal {
+    public final int MAX_AGE = 200;
     String scalecolor;
     public Reptile (String name, int age, String scalecolor) {
-        this.scalecolor = scalecolor;
         super(name, age);
+        this.scalecolor = scalecolor;
     }
 
     @Override
