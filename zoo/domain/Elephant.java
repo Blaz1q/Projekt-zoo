@@ -10,4 +10,8 @@ public class Elephant extends Mammal implements Trainable {
     public String performTrick() {
         return "chodzi po piłce";
     }
+    @Override
+    public String sound() {
+        return "*trabka*!";
+    }
 }

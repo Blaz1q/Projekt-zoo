@@ -2,6 +2,7 @@ package zoo.service;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReportingService implements Exportable {
@@ -17,5 +18,15 @@ public class ReportingService implements Exportable {
             System.err.println("Błąd podczas eksportu raportu: " + e.getMessage());
             return false;
         }
+    }
+    static String toJSON(ArrayList<String> raport){
+        StringBuilder result = new StringBuilder("[\n");
+        for (String i : raport) {
+            result.append("{\n");
+            result.append("action: ").append(i).append("\n");
+            result.append("},\n");
+        }
+        result.append("]\n");
+        return result.toString();
     }
 }

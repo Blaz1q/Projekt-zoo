@@ -39,7 +39,7 @@ class Mammal extends Animal {
 
     @Override
     public String sound() {
-        return "miau, hau!";
+        return "(Domyślny dźwięk)";
     }
 }
 class Bird extends Animal {
