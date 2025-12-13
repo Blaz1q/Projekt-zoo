@@ -10,4 +10,8 @@ public class Eagle extends Bird implements Trainable{
     public String performTrick() {
         return "fru";
     }
+    @Override
+    public String sound() {
+        return "Robimy napad na fabryke jaboli!";
+    }
 }

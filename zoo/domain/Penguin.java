@@ -15,4 +15,8 @@ public class Penguin extends Bird implements Swimmable, Trainable{
     public String performTrick() {
         return "Skok na bunge z obrotem";
     }
+    @Override
+    public String sound() {
+        return "wrr!";
+    }
 }

@@ -10,5 +10,9 @@ public class Iguana extends Reptile implements Swimmable{
     public String swim() {
         return "Blblblblblbbb..";
     }
+    @Override
+    public String sound() {
+        return "ssss!";
+    }
 }
 

@@ -10,4 +10,8 @@ public class Lion extends Mammal implements Trainable{
     public String performTrick() {
         return "Skok na bunge";
     }
+    @Override
+    public String sound() {
+        return "roar!";
+    }
 }
