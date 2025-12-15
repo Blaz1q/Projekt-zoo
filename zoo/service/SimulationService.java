@@ -37,5 +37,9 @@ public class SimulationService {
             Logs.add(animal.getName()+" made a sound. ("+animal.sound()+")");
         }
         System.out.println(ReportingService.toJSON(Logs));
+
+        ReportingService reportingService = new ReportingService();
+        reportingService.export(Logs, "zoo_simulation_log.txt");
     }
 }
+
