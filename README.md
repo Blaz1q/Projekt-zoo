@@ -64,7 +64,17 @@ classDiagram
         ~scalecolor String
         +String sound()
     }
+    class Trainable{
+        <<interface>>
+        +String performTrick()
+    }
+    class Eagle{
+        +String performTrick()
+        +String sound
+    }
     Animal<--Mammal
     Animal<--Bird
     Animal<--Reptile
+    Bird<--Eagle
+    Trainable<..Eagle
 ```
